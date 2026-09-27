@@ -1,0 +1,6 @@
+// Две части с разным окружением: интерфейс (DOM, без Node.js) и main/preload/настройки (Node.js, без DOM).
+// Проверка всего проекта: pnpm typecheck (tsc -b).
+{
+  "files": [],
+  "references": [{ "path": "./tsconfig.app.json" }, { "path": "./tsconfig.node.json" }]
+}

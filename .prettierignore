@@ -1,0 +1,2 @@
+# Файлы из .gitignore (node_modules, .vite, out) Prettier пропускает и так.
+pnpm-lock.yaml

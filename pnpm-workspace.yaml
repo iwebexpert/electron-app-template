@@ -1,0 +1,12 @@
+# Настройки pnpm. Файл делает папку проекта отдельным workspace: pnpm не ищет настройки в родительских папках.
+packages:
+  - '.'
+
+# Electron Forge не работает с симлинками pnpm: node_modules — обычной «плоской» структурой.
+nodeLinker: hoisted
+
+# Electron Forge 7 (через @electron/rebuild 3) берёт @electron/node-gyp из git, а pnpm запрещает зависимостям ставить
+# пакеты из git (blockExoticSubdeps — защита от подмены кода). Тот же форк опубликован в npm — берём его оттуда.
+# Можно убрать, когда Forge перейдёт на @electron/rebuild 4.
+overrides:
+  '@electron/node-gyp': 10.2.0-electron.2

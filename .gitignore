@@ -1,0 +1,14 @@
+# Зависимости и сборка
+node_modules/
+.vite/
+out/
+
+# Системные и временные файлы
+.DS_Store
+*.log
+.eslintcache
+
+# Локальные настройки окружения
+.env
+.env.*
+!.env.example
