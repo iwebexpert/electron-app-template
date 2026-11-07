@@ -2,7 +2,7 @@ import { BrowserWindow, shell, type WebContents } from 'electron';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const PRELOAD_PATH = path.join(__dirname, 'preload.js');
+const PRELOAD_PATH = path.join(__dirname, 'preload.cjs');
 const RENDERER_INDEX_PATH = path.join(__dirname, `../renderer/${MAIN_WINDOW_VITE_NAME}/index.html`);
 
 /** Страница самого приложения: dev-сервер Vite (pnpm start) или собранный index.html. */
